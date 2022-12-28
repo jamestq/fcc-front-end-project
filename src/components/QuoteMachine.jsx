@@ -57,7 +57,7 @@ export default class QuoteMachine extends React.Component{
 		    <div id="quote-box">
 		    	<div id="text">{this.state.quote}</div>
 		    	<div id="author">{this.state.author}</div>
-		    	<a id="tweet quote" href="twitter.com/intent/tweet">Tweet</a>
+		    	<a id="tweet quote" href="https://www.twitter.com/intent/tweet" target="_blank">Tweet</a>
 				<button id="new-quote" onClick={this.getNewQuote}>New Quote</button>
 		    </div>
 	</>
