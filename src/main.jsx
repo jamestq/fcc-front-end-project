@@ -11,28 +11,30 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
-    errorElement: <ErrorPage/>
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        path: "/clock",
+        element: <Clock/>
+      },
+      {
+        path: "/drum-machine",
+        element: <DrumMachine/>
+      },
+      {
+        path: "/calculator",
+        element: <JSCalculator/>
+      },
+      {
+        path: "/markdown-preview",
+        element: <MarkDownPreview/>
+      },
+      {
+        path: "/quote-machine",
+        element: <QuoteMachine/>
+      },
+    ]
   },
-  {
-    path: "/clock",
-    element: <Clock/>
-  },
-  {
-    path: "/drum-machine",
-    element: <DrumMachine/>
-  },
-  {
-    path: "/calculator",
-    element: <JSCalculator/>
-  },
-  {
-    path: "/markdown-preview",
-    element: <MarkDownPreview/>
-  },
-  {
-    path: "/quote-machine",
-    element: <QuoteMachine/>
-  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
