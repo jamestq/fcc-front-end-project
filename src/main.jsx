@@ -6,7 +6,6 @@ import {
   Clock, DrumMachine, JSCalculator,
   MarkDownPreview, QuoteMachine
 } from './Components';
-import MarkdownPreivew from './components/MarkdownPreview';
 
 const router = createBrowserRouter([
   {

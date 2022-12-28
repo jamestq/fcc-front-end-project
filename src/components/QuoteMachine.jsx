@@ -2,6 +2,12 @@ import React from 'react';
 
 export default class QuoteMachine extends React.Component{
     render(){
-        return <h1>This is Quote Machine</h1>
+        return <>
+		    <div id="quote-box">
+		    	<p id="text"></p>
+		    	<p id="author"></p>
+		    	<a id="tweet quote"/>
+		    </div>
+	</>
     }
 }
