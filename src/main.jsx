@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App';
-import ErrorPage from './ErrorPage';
+import {
+  App, ErrorPage,
+  Clock, DrumMachine, JSCalculator,
+  MarkDownPreview, QuoteMachine
+} from './Components';
+import MarkdownPreivew from './components/MarkdownPreview';
 
 const router = createBrowserRouter([
   {
@@ -11,7 +15,24 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>
   },
   {
-    
+    path: "/clock",
+    element: <Clock/>
+  },
+  {
+    path: "/drum-machine",
+    element: <DrumMachine/>
+  },
+  {
+    path: "/calculator",
+    element: <JSCalculator/>
+  },
+  {
+    path: "/markdown-preview",
+    element: <MarkDownPreview/>
+  },
+  {
+    path: "/quote-machine",
+    element: <QuoteMachine/>
   }
 ])
 
