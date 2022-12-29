@@ -10,7 +10,7 @@ export default class MarkdownPreivew extends React.Component{
 
         this.state = {
             input: '',
-            output: '',
+            output: this.firstLoad(),
         }
         this.handleChange = this.handleChange.bind(this);
     }
@@ -20,6 +20,22 @@ export default class MarkdownPreivew extends React.Component{
             input: event.target.value,
             output: parse(sanitizeHtml(marked.parse(event.target.value)))
         })
+    }
+
+    firstLoad(){
+        return <>
+            <h1>Type in the textarea to parse a markdown</h1>
+            <h2>This app uses marked, sanitize-html and html-react-parser to parse the markdown</h2>
+            <a href="https://marked.js.org/">Link to marked</a>
+            <br></br>
+            <a href="https://www.npmjs.com/package/sanitize-html">Link to sanitize-html</a>
+            <br></br>
+            <a href="https://www.npmjs.com/package/html-react-parser">Link to html-react-parser</a>
+            <br></br>
+            <code>
+
+            </code>
+        </>
     }
 
     render(){
